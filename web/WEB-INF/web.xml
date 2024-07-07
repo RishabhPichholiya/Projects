@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="4.0" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd">
+    
+    <!--Registration servlet and servlet-mapping-->
+    <servlet>
+        <servlet-name>Registration</servlet-name>
+        <servlet-class>com.trackcode.Registration</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>Registration</servlet-name>
+        <url-pattern>/Registration</url-pattern>
+    </servlet-mapping>
+    
+    <!--LoginPage servlet and servlet-mapping-->
+    <servlet>
+        <servlet-name>LoginPage</servlet-name>
+        <servlet-class>com.trackcode.LoginPage</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>LoginPage</servlet-name>
+        <url-pattern>/LoginPage</url-pattern>
+    </servlet-mapping>
+    
+    <!--Register servlet and servlet-mapping-->
+    <servlet>
+        <servlet-name>Register</servlet-name>
+        <servlet-class>com.trackcode.Home</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>Register</servlet-name>
+        <url-pattern>/Register</url-pattern>
+    </servlet-mapping>
+    
+    <!--Expense servlet and servlet-mapping-->
+    <servlet>
+        <servlet-name>Expense</servlet-name>
+        <servlet-class>com.trackcode.Expense</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>Expense</servlet-name>
+        <url-pattern>/Expense</url-pattern>
+    </servlet-mapping>
+    
+    <!--Logout servlet and servlet-mapping-->
+    <servlet>
+        <servlet-name>Logout</servlet-name>
+        <servlet-class>com.trackcode.Logout</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>Logout</servlet-name>
+        <url-pattern>/Logout</url-pattern>
+    </servlet-mapping>
+    
+    <!--Servlet-config-->
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    
+    <welcome-file-list>
+        <welcome-file>home.jsp</welcome-file>
+    </welcome-file-list>
+    
+    <!--Filters-->
+    <filter>
+        <filter-name>myfilter</filter-name>
+        <filter-class>com.trackcode.Filter_1</filter-class>
+    </filter>
+    
+    <filter-mapping>
+        <filter-name>myfilter</filter-name>
+        <url-pattern>/userhome.jsp</url-pattern>
+        <url-pattern>/myxpense.jsp</url-pattern>
+    </filter-mapping>
+    
+</web-app>
